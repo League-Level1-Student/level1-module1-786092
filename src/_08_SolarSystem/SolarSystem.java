@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 import game_tools.Game;
 import game_tools.GameControlScene;
 /*
- * Background:
+ * Background: 
  * Our solar system has 8 planets that orbit around the sun:
  * Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune
  * While each planet is spherical, they are different sizes, colors,
