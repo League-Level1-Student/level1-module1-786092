@@ -12,6 +12,9 @@ public class Hippo {
     String location;
     int startNeckSpeed = 15;
     int neckMoveDistance = 100;
+    String name = "hippo";
+    Color color;
+    
 
     /*
      * Constructor
