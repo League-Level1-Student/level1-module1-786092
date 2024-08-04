@@ -151,7 +151,7 @@ public class TurfWar extends PApplet {
     @Override
     public void settings() {
         // 5. Set the size for your sketch. Make it at least 300x300.
-    	size(300,300);
+    	size(500,500);
     }
 
     @Override
@@ -181,8 +181,8 @@ public class TurfWar extends PApplet {
          * will give that player an unfair advantage.
          */
        
-        player1 = new Player(50,150,10,50,0xFF0000,W,A,S,D);
-        player2 = new Player(250,150,10,50,0x0000FF,'I','J','K','L');
+        player1 = new Player(50,150,10,50,Color.RED.getRGB(),W,A,S,D);
+        player2 = new Player(250,150,10,50,Color.BLUE.getRGB(),'I','J','K','L');
         
     }
 
@@ -258,11 +258,13 @@ public class TurfWar extends PApplet {
         player1.update();
         player2.update();
         // 12. Call the isGameOver method.
-        
+        isGameOver();
         // 13. Call the displayStats method.
-
+        displayStats();
         // 14. If gameOver is true call the endGame method.
-
+        if(gameOver) {
+        	endGame();
+        }
     }
 
     @Override
@@ -271,7 +273,8 @@ public class TurfWar extends PApplet {
          * 15. Call the enableMovement method for both players and pass keyCode
          * to the method.
          */        
-
+    	player1.enableMovement(keyCode);
+    	player2.enableMovement(keyCode);
     }
 
     @Override
@@ -280,7 +283,8 @@ public class TurfWar extends PApplet {
          * 16. Call the disableMovement method for both players and pass keyCode
          * to the method.
          */
-
+    	player1.disableMovement(keyCode);
+    	player2.disableMovement(keyCode);
     }
 
     /*
